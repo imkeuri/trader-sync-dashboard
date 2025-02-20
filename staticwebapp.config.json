@@ -1,7 +1,15 @@
 {
   "routes": [
     {
-      "route": "/"
+      "route": "/assets/*.js",
+      "headers": {
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
     }
   ]
 }
